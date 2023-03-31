@@ -1,0 +1,233 @@
+<header id="header" class="header fixed-top d-flex align-items-center">
+   <div class="container d-flex align-items-center justify-content-between">
+      <a href="#hero" class="logo d-flex align-items-center me-auto me-lg-0">
+         <h1>Cantina <span>Automatizada</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+         <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Fale Conosco</a></li>
+            <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+               aria-controls="offcanvasRight">Carrinho</button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+               aria-labelledby="offcanvasRightLabel">
+               <div class="offcanvas-header">
+                  <h5 id="offcanvasRightLabel"> Carrinho de Compras</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                     aria-label="Close"></button>
+               </div>
+               <div class="offcanvas-body">
+                  <img class="imgcart"
+                     src="https://www.receitas-sem-fronteiras.com/uploads/media/coxinha-de-frango-4.jpg?1394164732"
+                     alt="">
+                  <p id="demo"><b>Coxinha </b> <b>R$4,50</b></p>
+               </div>
+
+               <button class="finalizarcompra" routerLink="/checkout">
+                  Finalizar Compra
+               </button>
+
+            </div>
+         </ul>
+      </nav>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i> <i
+         class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+   </div>
+</header>
+<section id="hero" class="hero d-flex align-items-center section-bg">
+   <div class="container">
+      <div class="row justify-content-between gy-5">
+         <div
+            class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+            <h2 data-aos="fade-up">Salgados Deliciosos<br>Bebidas Deliciosas</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Coma e se sinta nas nuvens!</p>
+            <div class="d-flex" data-aos="fade-up" data-aos-delay="200"> <a href="#menu "
+                  class="btn-book-a-table">Adquira já!</a> </div>
+         </div>
+         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start"> <img src="../assets/img/banner1.png"
+               class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300"></div>
+      </div>
+   </div>
+</section>
+<main id="main">
+   <section id="menu" class="menu">
+      <div class="container" data-aos="fade-up">
+         <div class="section-header">
+            <h2> Menu</h2>
+            <p>Esolha <span>o que te faz bem</span></p>
+         </div>
+         <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <li class="nav-item">
+               <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+                  <h4>Comidas</h4>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
+                  <h4>Bebidas</h4>
+               </a>
+         </ul>
+         <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+            <div class="tab-pane fade active show" id="menu-starters">
+               <div class="tab-header text-center">
+                  <p>Menu</p>
+                  <h3>Comidas</h3>
+               </div>
+               <div class="row gy-5">
+                  <div class="col-lg-4 menu-item">
+                     <a href="https://www.receitas-sem-fronteiras.com/uploads/media/coxinha-de-frango-4.jpg?1394164732"
+                        class="glightbox"><img class="imgcomida"
+                           src="https://www.receitas-sem-fronteiras.com/uploads/media/coxinha-de-frango-4.jpg?1394164732"
+                           class="menu-img img-fluid" alt=""></a>
+                     <h4>Coxinha</h4>
+                     <p class="price"> R$ 4,50</p>
+                     <input onclick="addItem()" type="submit" class="btncart" id="2" value="Comprar agora" />
+                  </div>
+                  <div class="col-lg-4 menu-item">
+                     <a href="https://img.freepik.com/free-photo/front-view-meat-burger-with-salad-cheese-tomatoes-dark-background_140725-89540.jpg?w=1380&t=st=1677866870~exp=1677867470~hmac=03a364adf80efa9f2997bf1ec11831c285dfe4f95e53dc55ea1485ddcc4e44e7"
+                        class="glightbox"><img class="imgcomida"
+                           src="https://img.freepik.com/free-photo/front-view-meat-burger-with-salad-cheese-tomatoes-dark-background_140725-89540.jpg?w=1380&t=st=1677866870~exp=1677867470~hmac=03a364adf80efa9f2997bf1ec11831c285dfe4f95e53dc55ea1485ddcc4e44e7"
+                           class="menu-img img-fluid" alt=""></a>
+                     <h4>X-Tudo</h4>
+                     <p class="price"> R$ 12,00</p>
+                     <input onClick="addItem()" type="submit" class="btncart" id="addcart" value="Comprar agora" />
+                  </div>
+                  <div class="col-lg-4 menu-item" id="mistoquente">
+                     <a href="https://static.wixstatic.com/media/0947c3_764c0ac89e404016ab04edb03b2d92a3~mv2.png/v1/fill/w_498,h_373,al_c,lg_1/0947c3_764c0ac89e404016ab04edb03b2d92a3~mv2.png     "
+                        class="glightbox"><img class="imgcomida"
+                           src="https://static.wixstatic.com/media/0947c3_764c0ac89e404016ab04edb03b2d92a3~mv2.png/v1/fill/w_498,h_373,al_c,lg_1/0947c3_764c0ac89e404016ab04edb03b2d92a3~mv2.png     "
+                           class="menu-img img-fluid" alt=""></a>
+                     <h4>Misto Quente</h4>
+                     <p class="price"> R$ 6,00</p>
+                     <input onclick="addItem()" type="submit" class="btncart" id="addcart" value="Comprar agora" />
+                  </div>
+               </div>
+            </div>
+            <div class="tab-pane fade" id="menu-breakfast">
+               <div class="tab-header text-center">
+                  <p>Menu</p>
+                  <h3>Bebidas</h3>
+               </div>
+               <div class="row gy-5">
+                  <div class="col-lg-4 menu-item">
+                     <a href="https://thumbs.dreamstime.com/b/um-copo-e-uma-lata-de-coca-cola-156479264.jpg"
+                        class="glightbox"><img
+                           src="https://thumbs.dreamstime.com/b/um-copo-e-uma-lata-de-coca-cola-156479264.jpg"
+                           class="menu-img img-fluid" alt=""></a>
+                     <h4>Coca-Cola Lata</h4>
+                     <p class="price"> R$ 4,80</p>
+                     <input onclick="addItem()" type="submit" class="btncart" id="addcart" value="Comprar agora" />
+                  </div>
+                  <div class="col-lg-4 menu-item">
+                     <a href="https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/165954251362ea9bf1d6226_75_75.jpeg"
+                        class="glightbox"><img
+                           src="https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/165954251362ea9bf1d6226_75_75.jpeg"
+                           class="menu-img img-fluid" alt=""></a>
+                     <h4>Suco Tropical</h4>
+                     <p class="price"> R$ 5,00</p>
+                     <input onclick="addItem()" type="submit" class="btncart" id="addcart" value="Comprar agora"
+                        name="buttoncart" />
+                  </div>
+                  <div class="col-lg-4 menu-item">
+                     <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Coffee_with_milk_%28563800%29.jpg/1200px-Coffee_with_milk_%28563800%29.jpg"
+                        class="glightbox"><img
+                           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Coffee_with_milk_%28563800%29.jpg/1200px-Coffee_with_milk_%28563800%29.jpg"
+                           class="menu-img img-fluid" alt=""></a>
+                     <h4>Café com Leite</h4>
+                     <p class="price"> R$ 3,00</p>
+                     <input onclick="addItem()" type="submit" class="btncart" id="addcart" value="Comprar agora" />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+         <div class="section-header">
+            <h2>Contato</h2>
+            <p>Precisa de ajuda? <span>Fale Conosco</span></p>
+         </div>
+         <div class="row gy-4">
+            <div class="col-md-6">
+               <div class="info-item d-flex align-items-center">
+                  <i class="icon bi bi-map flex-shrink-0"></i>
+                  <div>
+                     <h3>Endereço</h3>
+                     <p>Avenida</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="info-item d-flex align-items-center">
+                  <i class="icon bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                     <h3>Contate-nos</h3>
+                     <p>contato@splcompany.com.br</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="info-item d-flex align-items-center">
+                  <i class="icon bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                     <h3>Ligue</h3>
+                     <p>12 99687-2875</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="info-item d-flex align-items-center">
+                  <i class="icon bi bi-share flex-shrink-0"></i>
+                  <div>
+                     <h3>Abertos</h3>
+                     <div><strong>Seg-Sab:</strong> 7:30 - 21:45; <strong>Domingo</strong> Fechado</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+<footer id="footer" class="footer">
+   <div class="container">
+      <div class="row gy-3">
+         <div class="col-lg-3 col-md-6 d-flex">
+            <i class="bi bi-geo-alt icon"></i>
+            <div>
+               <h4>Endereço</h4>
+               <p> 1266 <br> Av. Independencia, Taubaté<br></p>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 footer-links d-flex">
+            <i class="bi bi-telephone icon"></i>
+            <div>
+               <h4>Ligue</h4>
+               <p> <strong>Telefone:</strong> 12 99687-2875<br> <strong>Email:</strong>contato@splcompany.com.br<br></p>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 footer-links d-flex">
+            <i class="bi bi-clock icon"></i>
+            <div>
+               <h4>Aberto</h4>
+               <p> <strong>Seg-Sab: 7:30</strong> - 21:45<br> Domingo: Fechado</p>
+            </div>
+         </div>
+         <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Follow Us</h4>
+            <div class="social-links d-flex"> <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> <a href="#"
+                  class="facebook"><i class="bi bi-facebook"></i></a> <a href="#" class="instagram"><i
+                     class="bi bi-instagram"></i></a> <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="copyright"> &copy; Copyright <strong><span>CantinaAutomatizada</span></strong>. Todos os direitos
+         reservados</div>
+   </div>
+</footer>
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
